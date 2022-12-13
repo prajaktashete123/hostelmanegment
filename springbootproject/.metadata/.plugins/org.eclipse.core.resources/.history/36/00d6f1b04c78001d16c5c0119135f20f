@@ -1,0 +1,45 @@
+package com.boot.payload;
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.boot.entity.AllocatedRoomEntity;
+import com.boot.entity.FloorEntity;
+import com.boot.entity.RoomEntity;
+import com.boot.entity.StudentEntity;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@ToString
+public class RoomDTO {
+	
+	private int roomId;
+	
+	private String roomType;
+	
+	private int roomFee;
+	
+	 private int roomCapacity;
+	 
+	 private boolean roomStatus;
+	 
+	 private int availableSeat;
+
+	 
+	// @JsonIgnore
+	  private FloorDTO floor;
+	
+	 
+	 @JsonIgnore
+	private List<AllocatedRoomDTO> allocatedroomList=new ArrayList<>();
+	
+	
+}
